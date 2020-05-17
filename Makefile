@@ -5,6 +5,7 @@ DEBUG = -DDEBUG
 TIME = -DTIME
 
 all: mpi_static mpi_dynamic omp hybrid
+all_debug: mpi_static_debug mpi_dynamic_debug omp_debug hybrid_debug
 
 mpi_static: mpi_static.c
 	$(MPICC) mpi_static.c $(CFLAGS) -o mpi_static
